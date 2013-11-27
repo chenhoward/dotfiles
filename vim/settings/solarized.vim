@@ -3,6 +3,14 @@ if !has("gui_macvim")
   let g:solarized_termcolors=256
 endif
 
+if !has('gui_running')
+  " Compatibility for Terminal
+  let g:solarized_termtrans=1
+
+  " Make Solarized use 16 colors for Terminal support
+  let g:solarized_termcolors=16
+endif
+
 hi! link txtBold Identifier
 hi! link zshVariableDef Identifier
 hi! link zshFunction Function
